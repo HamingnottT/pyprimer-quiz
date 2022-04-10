@@ -1,0 +1,61 @@
+# 6) Given a positive integer N. The task is to find 12 + 22 + 32 + ….. + N2.
+def question6(N):
+    pass
+
+
+# 7) Given an array of integers, find the sum of its elements.
+def question7(N):
+    pass
+
+
+# 8) Given an array, find the largest element in it.
+def question8(N):
+    pass
+
+
+def question9(N):
+    pass
+
+
+def question10(N):
+    pass
+
+
+def question11(N):
+    pass
+
+
+def question12(N):
+    pass
+
+
+def question13(N):
+    pass
+
+
+def question14(N):
+    pass
+
+
+def question15(N):
+    pass
+
+
+def question16(N):
+    pass
+
+
+def question17(N):
+    pass
+
+
+def question18(N):
+    pass
+
+
+def question19(N):
+    pass
+
+
+def question20(N):
+    pass

@@ -1,3 +1,5 @@
+import utils as u
+
 # 1) Given two numbers num1 and num2. The task is to write a Python program to find the addition of these two numbers.
 def question1(num1, num2):
     return num1 + num2
@@ -77,79 +79,130 @@ def question4(N):
 
 # 5) Given a number \’n\’, how to check if n is a Fibonacci number. First few Fibonacci numbers are 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, .. 
 def question5(N):
+    list = []
+    N = N
+    range_int = 100     #fixed to 100
 
-    def fibo(N):
-        list = []
-        for i in range(1, N)
+    # constructed fibonacci sequence to analyze logic and use as basis for answer
+    def fibo(range_int):
+        # global list     #global list so that I can access this fibo list in other functions
+        
 
-            list.append()
+        for i in range(0, range_int):
+            if i == 0:
+                list.append(0)
+            elif i == 1:
+                list.append(1)
+            else:
+                list.append(list[i-1]+list[i-2])
 
+    fibo(range_int)
+
+    def check_fibo(N):
+        pos_match = 0
+        for i in list:
+            if N == i:
+                pos_match += 1
+            else:
+                pass
+
+        if pos_match >= 1:
+            print("Yes, this is a fibonacci number.")
+        else:
+            print("No, this is not a fibonacci number.")
+
+    check_fibo(N)
 
 
 # 6) Given a positive integer N. The task is to find 12 + 22 + 32 + ….. + N2.
 def question6(N):
-    pass
+    list = []
+    list_sq = []
+    
+    for i in range(1, N + 1):
+        list.append(i)
+    
+    for i in list:
+        list_sq.append(i ** 2)
+
+    result = sum(list_sq)
+
+    print(result)
 
 
 # 7) Given an array of integers, find the sum of its elements.
 def question7(N):
-    pass
+    array = N.split(" ")                # create list from string
+    for i in range(0, len(array)):      # iterate thru array's length
+        array[i] = int(array[i])        # convert string values to integer
 
+    # method 1:                         # use the sum function on the list - the cheap way!
+    # print(sum(array))                 
+    
+    # method 2:                         # for loop to iterate thru the array list values incrementing to variable sum
+    sum = 0
+    for i in array:
+        sum += i
+
+    print(sum)
 
 # 8) Given an array, find the largest element in it.
 def question8(N):
-    pass
+    array = N.split(" ")                # create list from string
+    for i in range(0, len(array)):      # iterate thru array's length
+        array[i] = int(array[i])        # convert string values to integer
+
+    # attempt 1:                        # Wierd results - keeping for self education
+    # max_list = []
+    # for i in range(1, len(array)):
+    #     if array[i] > array[i - 1]:
+    #         max_list.append(array[i])
+    
+    # print(max_list)
+
+    # for i in range(1, len(max_list)):
+    #     if max_list[i] > max_list[i - 1]:
+    #         max_list.append(array[i])
+        
+    # print(max_list)
+
+    # attempt 2:                        # sort array and then return the maximum number at the beginning
+    arr_sorted = sorted(array, reverse=True)
+    result = int(arr_sorted[0])
+    print(arr_sorted[0])
 
 
-def question9(N):
-    pass
+# 9) Given multiple numbers and a number n, the task is to print the remainder after multiply all the number divide by n.
+def question9(list, N):
+    array = list.split(" ")
+    array_product = 1                   # not 0 because the first index product would be zero
+
+    for i in range(0, len(array)):      # iterate thru array's length
+        array[i] = int(array[i])        # convert string values to integer
+
+    for i in array:
+        array_product = array_product * i
+
+    result = array_product % N          # mod by N for remainder
+
+    print(result)
 
 
-def question10(N):
-    pass
+# 10) Split the array [12, 30, 25, 16, 23, 14],  and move the first part of array add to the end.
+def question10(list, k):
+    list = u.split_list_from_string(list)       
+    list = u.list_string_2_int(list)            # set problem up by converting list of string to list of integers using utils custom module
+    
+    # attempt 1: 
+    first_int = list[:k]                         # store first integers in its own variable
+    split_list = list[k:]                               
 
+    result = split_list + first_int
 
-def question11(N):
-    pass
-
-
-def question12(N):
-    pass
-
-
-def question13(N):
-    pass
-
-
-def question14(N):
-    pass
-
-
-def question15(N):
-    pass
-
-
-def question16(N):
-    pass
-
-
-def question17(N):
-    pass
-
-
-def question18(N):
-    pass
-
-
-def question19(N):
-    pass
-
-
-def question20(N):
-    pass
-
+    print(result)
 
 def main():
+    
     # question 1:
     # print("Question 1:")
     # num1 = int(input("num1 here: "))
@@ -172,7 +225,44 @@ def main():
     # print("Question 4:")
     # N = int(input("enter 'N' here: "))
     # question4(N)
+    
+    # question 5:
+    # print("Question 5:")
+    # N = int(input("enter 'N' here: "))
+    # question5(N)
 
+    # question 6:
+    # print("Question 6:")
+    # N = int(input("enter 'N' here: "))
+    # question6(N)
+
+    # question 7:
+    # print("Question 7:")
+    # array_str = input("Input list of numbers (space in between): ")
+    # question7(array_str)
+
+    # question 8:
+    # print("Question 8:")
+    # array_str = input("Input list of numbers (space in between): ")
+    # question8(array_str)
+
+    # question 9:
+    # print("Question 9:")
+    # list = input("Input list of numbers (space in between): ")
+    # N = int(input("N = "))
+    # question9(list, N)
+
+    # question 10:
+    # print("Question 10:")
+    # list_input = input("Input list of numbers (space in between): ")
+    # print(list_input)
+    # k_input = int(input("k = "))
+    # question10(list_input, k_input)
+
+    # question 11:
+    print("question 11:")
+
+    # pass   
 
 
 if __name__ == '__main__':
