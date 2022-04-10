@@ -201,6 +201,92 @@ def question10(list, k):
 
     print(result)
 
+# 11) Given a list, write a Python program to swap first and last element of the list.
+def question11(list):
+    list = u.split_list_from_string(list)       # splits string of numbers into list of string numbers
+    list = u.list_string_2_int(list)            # converts string list to integer list
+
+    # attempt 1:
+    print(f"Before: {list}")
+    first_int = list[0]                         # retains the value of the first integer
+    last_int = list[-1]                         # retains the value of the last integer
+
+    list.remove(list[0])                        #removes the first integer of the list
+    list.remove(list[-1])                       #removes the last integer of the list
+
+    list.append(first_int)                      #appends the first int to the last position
+    list.insert(0, last_int)                    #inserts the last int to the head of the list
+
+    print(f"After: {list}")
+
+
+# 12) Given a list in Python and provided the positions of the elements, write a program to swap the two elements in the list.
+def question12(list, pos1, pos2):
+    list = u.split_list_from_string(list)
+    list = u.list_string_2_int(list)
+    pos1 = pos1
+    pos2 = pos2
+
+    int1 = list[(pos1 - 1)]
+    int2 = list[(pos2 - 1)]
+
+    list.remove(int1)
+    list.remove(int2)
+
+    list.insert((pos1 - 1), int2)               # wrote pos1 - 1 to ensure value is inserted in the currect location
+    list.insert((pos2 - 1), int1)
+
+    print(list)
+
+
+# 13) Write a program to reverse a list in a python.
+def question13(list):
+    list = u.split_list_from_string(list)
+    list = u.list_string_2_int(list)
+
+    print(list)
+    list.reverse()                            #or sorted(list, reverse=True)
+    print(list)
+
+
+# 14) Given a list of numbers, the task is to write a Python program to find the smallest number in given list.
+def question14(list):
+    list = u.split_list_from_string(list)
+    list = u.list_string_2_int(list)
+
+    sorted_list = sorted(list)
+    result = sorted_list[0]
+    print(result)
+
+
+# 15) Write a program to remove an empty list from list
+def question15(list):
+    int_list = []
+
+    for i in list:
+        if type(i) == int:
+            int_list.append(i)
+
+    print(int_list)
+
+
+# 16) Given a list in Python and a number x, count number of occurrences of x in the given list.
+def question16(list, x):
+    list = u.split_list_from_string(list)
+    list = u.list_string_2_int(list)
+
+    x_counter = 0
+
+    for i in list:
+        if i == x:
+            x_counter += 1
+
+    print(x_counter)
+
+
+# 17) Given two lists, sort the values of one list using the second list
+
+
 def main():
     
     # question 1:
@@ -255,12 +341,47 @@ def main():
     # question 10:
     # print("Question 10:")
     # list_input = input("Input list of numbers (space in between): ")
-    # print(list_input)
     # k_input = int(input("k = "))
     # question10(list_input, k_input)
 
     # question 11:
-    print("question 11:")
+    # print("question 11:")
+    # list_input = input("Input list of numbers (space in between): ")
+    # question11(list_input)
+
+    # question 12:
+    # print("question 12:")
+    # list_input = input("Input list of numbers (space in between): ")
+    # pos1 = int(input("Position 1: "))
+    # pos2 = int(input("Position 2: "))
+    # question12(list_input, pos1=pos1, pos2=pos2)
+
+    # question 13:
+    # print("question 13:")
+    # list_input = input("Input list of numbers (space in between): ")
+    # question13(list_input)
+
+    # question 14:
+    # print("question 14:")
+    # list_input = input("Input list of numbers (space in between): ")
+    # question14(list_input)
+
+    # question 15:
+    # print("question 15:")
+    # list_input = [5, 6, [], 3, [], [], 9]
+    # question15(list_input)
+
+    # question 16:
+    # print("question 16:")
+    # list_input = input("Input list of numbers (space in between): ")
+    # x = int(input("x = "))
+    # question16(list_input, x=x)
+
+    # question 17:
+    print("question 17:")
+    list_input1 = input("Input list of numbers (space in between): ")
+    list_input2 = input("Input list of numbers (space in between): ")
+    question17(list_input1, list_input2)
 
     # pass   
 

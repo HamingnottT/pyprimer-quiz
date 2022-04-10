@@ -1,6 +1,4 @@
 # general purpose functions to reuse
-import re
-
 
 # splits a string to a list by delimiter " "
 def split_list_from_string(string):
@@ -26,6 +24,7 @@ def remove_symbols(string):
 
 
 def main():
+    # for debugging
     list_input = ['1', '2', '3']
     x = list_string_2_int(list_input)
 
