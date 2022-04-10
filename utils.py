@@ -22,7 +22,6 @@ def remove_symbols(string):
     return clean_string
 
 
-
 def main():
     # for debugging
     list_input = ['1', '2', '3']

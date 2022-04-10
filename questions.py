@@ -1,4 +1,5 @@
 import utils as u
+import re
 
 # 1) Given two numbers num1 and num2. The task is to write a Python program to find the addition of these two numbers.
 def question1(num1, num2):
@@ -284,7 +285,77 @@ def question16(list, x):
     print(x_counter)
 
 
+# /!\ needs attention
 # 17) Given two lists, sort the values of one list using the second list
+def question17(list1, list2):
+    list1 = u.split_list_from_string(list1)
+    list2 = u.split_list_from_string(list2)
+    list2 = u.list_string_2_int(list2)
+
+    dict = {}
+
+    for i in range(0, len(list2)):
+        dict[list2[i]] = list1[i]
+
+    print(dict)
+
+
+# 20) Given a string, write a python function to check if it is palindrome or not. A string is said to be palindrome if the reverse of the string is the same as string. For example, “radar” is a palindrome, but “radix” is not a palindrome.
+def question20(string):
+
+    if string == string[::-1]:
+        print("Yes")
+    else:
+        print("No")
+
+
+# 21) Given a string. The task is to print all words with even length in the given string.
+def question21(string):
+    string_list = u.split_list_from_string(string)
+
+    print("\nmethod 1:\n")                      # keeping this version in here because it prints to one line
+    for i in string_list:
+        if len(i) % 2 != 0:
+            string_list.remove(i)
+
+    string_list = str(string_list)
+    result = u.remove_symbols(string_list)
+    
+    print(result)
+
+    string_list = u.split_list_from_string(string)
+
+    print("\nmethod 2:\n")                      # this method is true to the expected output of the question
+    for i in string_list:
+        if len(i) % 2 != 0:
+            string_list.remove(i)
+
+    for i in string_list:
+        print(i)  
+
+
+# /!\ needs attention
+# 22) Given a string str. The task is to check whether it is a binary string or not.
+def question22(string):
+    non_binary_chars = "qwertyuiop[]_+asdfghjkl:'\"/<>,.zxcvbnm23456789!@#$%^&*()=-"
+
+    try:
+        binary = [re.findall("01", string)[0], re.findall("10", string)[0], re.findall("11", string)[0], re.findall("00", string)[0]]
+    except IndexError:
+        # IndexError is thrown on regular strings
+        # not known why but this is a short term handling for functionality - resular binary character will show match positive
+
+        pass
+
+    for i in string:
+        if i == binary
+
+    # clean_string = string
+    # unwanted_chars = "!@#$%^&*()_+{}\|:'<>/[,]"
+    # for char in unwanted_chars:
+    #     clean_string = clean_string.replace(char, "")
+    # # expected output 9 8 10 122 1290
+    # return clean_string
 
 
 def main():
@@ -378,10 +449,31 @@ def main():
     # question16(list_input, x=x)
 
     # question 17:
-    print("question 17:")
-    list_input1 = input("Input list of numbers (space in between): ")
-    list_input2 = input("Input list of numbers (space in between): ")
-    question17(list_input1, list_input2)
+    # print("question 17:")
+    # list_input1 = input("Input list of numbers (space in between): ")
+    # list_input2 = input("Input list of numbers (space in between): ")
+    # question17(list_input1, list_input2)
+
+    # question 18:
+    # print("question 18:")
+
+    # question 19:
+    # print("question 19:")
+
+    # question 20:
+    # print("question 20:")
+    # str_input = input("Enter string here: ")
+    # question20(str_input)
+
+    # question 21:
+    # print("question 21:")
+    # str_input = input("Enter string here: ")
+    # question21(str_input)
+
+    # question 22:
+    print("question 22:")
+    str_input = input("Enter string here: ")
+    question22(str_input)
 
     # pass   
 
