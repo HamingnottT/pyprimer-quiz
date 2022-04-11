@@ -1,5 +1,9 @@
+# initializes program
+
+import questions
+
 def main():
-    pass
+    questions.main()
 
 if __name__ == '__main__':
     main()

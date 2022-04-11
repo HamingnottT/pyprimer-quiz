@@ -1,4 +1,7 @@
-import utils as u
+# questions with main menu and input at the bottom
+# rough draft menu demo for scalability
+
+import utils as u       # general purpose functions to reuse
 import re
 
 # 1) Given two numbers num1 and num2. The task is to write a Python program to find the addition of these two numbers.
@@ -372,7 +375,7 @@ def question25(list):
 
 def main():
     
-    print("Please enter question number to get started.")
+    print("\nPlease enter question number to get started.\n")
 
     option = int(input("> "))
 
@@ -534,8 +537,7 @@ def main():
         else:
             print("\nInvalid response, please try again.\n")
 
-        print("\n")
-        print("Please enter question number to get started.")    
+        print("\nPlease enter question number to get started.\n")    
         option = int(input("> "))
     # pass   
     print("\nEnding program. . .\n")
