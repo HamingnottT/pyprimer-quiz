@@ -34,7 +34,7 @@ def question2(a, b):
     return max
 
 
-# /!\ needs review /!\
+# /!\ needs attention /!\
 # 3) Given two positive integers start and end. The task is to write a Python program to print all Prime numbers in an Interval.
 def question3(start, end):
 
@@ -346,10 +346,6 @@ def question22(string):
         # not known why but this is a short term handling for functionality - resular binary character will show match positive
 
         pass
-
-    for i in string:
-        if i == binary
-
     # clean_string = string
     # unwanted_chars = "!@#$%^&*()_+{}\|:'<>/[,]"
     # for char in unwanted_chars:
@@ -357,126 +353,192 @@ def question22(string):
     # # expected output 9 8 10 122 1290
     # return clean_string
 
+# /!\ needs attention
+# 23) Given a dictionary in Python, write a Python program to find the sum of all items in the dictionary.
+def question23(key, value):
+    key = u.split_list_from_string(key)
+    value = u.split_list_from_string(value)
+    value = u.list_string_2_int(value)
+    dict = {}
+    for i in key:
+        dict[i]
+
+    print(dict)
+
+# 25) Given an array of words, print all anagrams together
+def question25(list):
+    list = u.split_list_from_string(list)
+            
 
 def main():
     
-    # question 1:
-    # print("Question 1:")
-    # num1 = int(input("num1 here: "))
-    # num2 = int(input("num1 here: "))
-    # print(question1(num1, num2))
-    
-    # question 2:
-    # print("Question 2:")
-    # a = int(input("enter 'a' here: "))
-    # b = int(input("enter 'b' here: "))
-    # print(question2(a, b))
+    print("Please enter question number to get started.")
 
-    # question 3:
-    # print("Question 3:")
-    # start = int(input("Start of range: "))
-    # end = int(input("End of range: "))
-    # print(question3(start, end))
+    option = int(input("> "))
 
-    # question 4:
-    # print("Question 4:")
-    # N = int(input("enter 'N' here: "))
-    # question4(N)
-    
-    # question 5:
-    # print("Question 5:")
-    # N = int(input("enter 'N' here: "))
-    # question5(N)
+    while option != 0:
+        if option == 1:
+            # question 1:
+            print("Question 1:")
+            num1 = int(input("num1 here: "))
+            num2 = int(input("num1 here: "))
+            print(question1(num1, num2))
+            
+        elif option == 2:
+            # question 2:
+            print("Question 2:")
+            a = int(input("enter 'a' here: "))
+            b = int(input("enter 'b' here: "))
+            print(question2(a, b))
 
-    # question 6:
-    # print("Question 6:")
-    # N = int(input("enter 'N' here: "))
-    # question6(N)
+        elif option == 3:
+            # question 3:
+            print("Question 3:")
+            start = int(input("Start of range: "))
+            end = int(input("End of range: "))
+            print(question3(start, end))
 
-    # question 7:
-    # print("Question 7:")
-    # array_str = input("Input list of numbers (space in between): ")
-    # question7(array_str)
+        elif option == 4:
+            # question 4:
+            print("Question 4:")
+            N = int(input("enter 'N' here: "))
+            question4(N)
 
-    # question 8:
-    # print("Question 8:")
-    # array_str = input("Input list of numbers (space in between): ")
-    # question8(array_str)
+        elif option == 5:
+            # question 5:
+            print("Question 5:")
+            N = int(input("enter 'N' here: "))
+            question5(N)
 
-    # question 9:
-    # print("Question 9:")
-    # list = input("Input list of numbers (space in between): ")
-    # N = int(input("N = "))
-    # question9(list, N)
+        elif option == 6:
+            # question 6:
+            print("Question 6:")
+            N = int(input("enter 'N' here: "))
+            question6(N)
 
-    # question 10:
-    # print("Question 10:")
-    # list_input = input("Input list of numbers (space in between): ")
-    # k_input = int(input("k = "))
-    # question10(list_input, k_input)
+        elif option == 7:
+            # question 7:
+            print("Question 7:")
+            array_str = input("Input list of numbers (space in between): ")
+            question7(array_str)
 
-    # question 11:
-    # print("question 11:")
-    # list_input = input("Input list of numbers (space in between): ")
-    # question11(list_input)
+        elif option == 8:
+            # question 8:
+            print("Question 8:")
+            array_str = input("Input list of numbers (space in between): ")
+            question8(array_str)
 
-    # question 12:
-    # print("question 12:")
-    # list_input = input("Input list of numbers (space in between): ")
-    # pos1 = int(input("Position 1: "))
-    # pos2 = int(input("Position 2: "))
-    # question12(list_input, pos1=pos1, pos2=pos2)
+        elif option == 9:
+            # question 9:
+            print("Question 9:")
+            list = input("Input list of numbers (space in between): ")
+            N = int(input("N = "))
+            question9(list, N)
 
-    # question 13:
-    # print("question 13:")
-    # list_input = input("Input list of numbers (space in between): ")
-    # question13(list_input)
+        elif option == 10:
+            # question 10:
+            print("Question 10:")
+            list_input = input("Input list of numbers (space in between): ")
+            k_input = int(input("k = "))
+            question10(list_input, k_input)
 
-    # question 14:
-    # print("question 14:")
-    # list_input = input("Input list of numbers (space in between): ")
-    # question14(list_input)
+        elif option == 11:
+            # question 11:
+            print("question 11:")
+            list_input = input("Input list of numbers (space in between): ")
+            question11(list_input)
 
-    # question 15:
-    # print("question 15:")
-    # list_input = [5, 6, [], 3, [], [], 9]
-    # question15(list_input)
+        elif option == 12:
+            # question 12:
+            print("question 12:")
+            list_input = input("Input list of numbers (space in between): ")
+            pos1 = int(input("Position 1: "))
+            pos2 = int(input("Position 2: "))
+            question12(list_input, pos1=pos1, pos2=pos2)
 
-    # question 16:
-    # print("question 16:")
-    # list_input = input("Input list of numbers (space in between): ")
-    # x = int(input("x = "))
-    # question16(list_input, x=x)
+        elif option == 13:
+            # question 13:
+            print("question 13:")
+            list_input = input("Input list of numbers (space in between): ")
+            question13(list_input)
 
-    # question 17:
-    # print("question 17:")
-    # list_input1 = input("Input list of numbers (space in between): ")
-    # list_input2 = input("Input list of numbers (space in between): ")
-    # question17(list_input1, list_input2)
+        elif option == 14:
+            # question 14:
+            print("question 14:")
+            list_input = input("Input list of numbers (space in between): ")
+            question14(list_input)
 
-    # question 18:
-    # print("question 18:")
+        elif option == 15:
+            # question 15:
+            print("question 15:")
+            list_input = [5, 6, [], 3, [], [], 9]
+            question15(list_input)
 
-    # question 19:
-    # print("question 19:")
+        elif option == 16:
+            # question 16:
+            print("question 16:")
+            list_input = input("Input list of numbers (space in between): ")
+            x = int(input("x = "))
+            question16(list_input, x=x)
 
-    # question 20:
-    # print("question 20:")
-    # str_input = input("Enter string here: ")
-    # question20(str_input)
+        elif option == 17:
+            # question 17:
+            print("question 17:")
+            list_input1 = input("Input list of numbers (space in between): ")
+            list_input2 = input("Input list of numbers (space in between): ")
+            question17(list_input1, list_input2)
 
-    # question 21:
-    # print("question 21:")
-    # str_input = input("Enter string here: ")
-    # question21(str_input)
+        elif option == 18:
+            # question 18:
+            print("question 18:")
 
-    # question 22:
-    print("question 22:")
-    str_input = input("Enter string here: ")
-    question22(str_input)
+        elif option == 19:
+            # question 19:
+            print("question 19:")
 
+        elif option == 20:
+            # question 20:
+            print("question 20:")
+            str_input = input("Enter string here: ")
+            question20(str_input)
+
+        elif option == 21:
+            # question 21:
+            print("question 21:")
+            str_input = input("Enter string here: ")
+            question21(str_input)
+
+        elif option == 22:
+            # question 22:
+            print("question 22:")
+            str_input = input("Enter string here: ")
+            question22(str_input)
+
+        elif option == 23:
+            # question 23:
+            print("question 23:")
+            key_input = input("Enter key here: ")
+            value_input = input("Enter value here: ")
+            question23(key_input, value_input)
+
+        elif option == 24:
+            # question 24:
+            print("question 24:")
+
+        elif option == 25:
+            # question 25:
+            print("question 25:")
+            list_input = input("Input list of numbers (space in between): ")
+            question25(list_input)
+
+        else:
+            print("\nInvalid response, please try again.\n")
+
+        print("\n")
+        print("Please enter question number to get started.")    
+        option = int(input("> "))
     # pass   
-
+    print("\nEnding program. . .\n")
 
 if __name__ == '__main__':
     main()
